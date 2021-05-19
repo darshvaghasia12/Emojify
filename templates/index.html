@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emojify-Sentiment Analysis and displaying parallel Emoji</title>
+</head>
+<style>
+    body{
+        background-image:url({{url_for('static',filename='pexels-francesco-ungaro-96381.jpg')}});
+         background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    h1{
+        font-family:Gill Sans, sans-serif;
+        color:hsl(340deg 100% 32%);
+        font-size:100px;
+    }
+
+    .EMOJIFY{
+        margin-left:550px;
+    }
+
+    .EMOJI_button{
+        padding:50px;
+        font-size:50px;
+        border-radius:10px;
+        border:0px;
+        color:white;
+        background: hsl(340deg 100% 32%);
+    }
+
+    .EMOJI_button:hover {
+        transform: translateY(-6px);
+        boxshadow: 10px 10px #900C3F;
+        background-color:white;
+        color: hsl(340deg 100% 32%);
+    }
+</style>
+<body>
+    <center><h1>Emojify</h1></center>
+    <div class="EMOJIFY">
+    <form id="Emojify-form" action="{{ url_for('Emojify') }}" method="POST" enctype="multipart/form-data">
+        <input type="submit" value="START" class="EMOJI_button">
+
+    </form>
+    </div>
+</body>
+</html>
